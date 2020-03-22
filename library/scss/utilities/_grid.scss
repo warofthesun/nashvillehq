@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 1030px) {
+    .sm-10 {
+      width: 100% !important;
+    }
+  }
+
+  .md-3 {
+    width: 30%;
+  }
+
+  .md-7 {
+    width: 70%;
+  }
+
+}

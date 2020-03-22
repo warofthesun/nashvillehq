@@ -1,0 +1,29 @@
+$white:   #ffffff;
+$primary: #002d53;
+$dark:    #001A3C;
+$accent:  #cd2653;
+$light:   #d2e9ec;
+
+
+a.button {
+  background-color: $accent;
+  padding: .5em 1em;
+  color: $white;
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    background-color: darken($accent, 5%);
+    text-decoration: none;
+  }
+}
+
+a {
+  font-weight: bold;
+}
+
+.padding-remove {
+  &__top {
+    padding-top: 0;
+  }
+}
