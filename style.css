@@ -12,15 +12,16 @@
  Text Domain:  twentytwentychild
  GitHub Theme URI: https://github.com/warofthesun/nashvillehq
 */
-a.button {
-  background-color: #cd2653;
+a.button, input[type=button], .nf-form-content input[type=button] {
+  background-color: #cd2653 !important;
   padding: .5em 1em;
+  margin-bottom: 2em;
   color: #ffffff;
   text-decoration: none;
   -webkit-transition: all .3s;
   transition: all .3s; }
-  a.button:hover {
-    background-color: #b7224a;
+  a.button:hover, input[type=button]:hover, .nf-form-content input[type=button]:hover {
+    background-color: #b7224a !important;
     text-decoration: none; }
 
 a {
@@ -53,6 +54,12 @@ a {
       width: 100% !important; } }
   .columns .md-3 {
     width: 30%; }
+  .columns .md-4 {
+    width: 40%; }
+  .columns .md-5 {
+    width: 50%; }
+  .columns .md-6 {
+    width: 60%; }
   .columns .md-7 {
     width: 70%; }
 
@@ -136,28 +143,15 @@ body.custom-background {
     padding-top: 0; }
   .resources.alignwide {
     margin-top: 0;
-    width: 50em; }
+    max-width: 50em; }
   .resources h1 {
     margin-top: 0;
     margin-bottom: 1em;
     padding-top: 0;
     font-size: 3.5em; }
-  .resources__grid .column {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    text-align: left; }
-    .resources__grid .column__left {
-      width: 40%; }
-    .resources__grid .column__right {
-      width: 60%; }
+    @media only screen and (max-width: 1030px) {
+      .resources h1 {
+        font-size: 2.5em; } }
   .resources__grid h2 {
     padding: 0;
     margin: 0 0 .5em 0;
@@ -217,7 +211,8 @@ a[rel="tag"] {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  margin-left: 0; }
   @media only screen and (max-width: 1030px) {
     .resource-list ul {
       -ms-flex-wrap: wrap;
@@ -225,6 +220,9 @@ a[rel="tag"] {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; } }
-  .resource-list ul li {
-    margin-right: 1.5em; }
+              flex-direction: row; }
+      .resource-list ul li ul li {
+        width: 50%; } }
+
+.nf-form-fields-required {
+  display: none !important; }

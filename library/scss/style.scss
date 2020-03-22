@@ -125,7 +125,7 @@ body {
   }
   &.alignwide {
     margin-top: 0;
-    width: 50em;
+    max-width: 50em;
   }
 
   h1 {
@@ -133,23 +133,13 @@ body {
     margin-bottom: 1em;
     padding-top: 0;
     font-size: 3.5em;
+
+    @media only screen and (max-width: 1030px) {
+      font-size: 2.5em;
+    }
   }
 
   &__grid {
-    .column {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
-
-      &__left {
-        width: 40%;
-      }
-
-      &__right {
-        width: 60%;
-      }
-    }
 
     h2 {
       padding: 0;
@@ -230,15 +220,23 @@ a[rel="tag"] {
     font-family: $body;
     display: flex;
     flex-direction: column;
+    margin-left: 0;
 
     @media only screen and (max-width: 1030px) {
       flex-wrap: wrap;
       flex-direction: row;
-    }
 
-
-    li {
-      margin-right: 1.5em;
+      li {
+        ul {
+          li {
+            width: 50%;
+          }
+        }
+      }
     }
   }
+}
+
+.nf-form-fields-required {
+  display: none !important;
 }
