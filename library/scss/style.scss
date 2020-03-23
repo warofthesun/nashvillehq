@@ -5,7 +5,7 @@
  Author:       Dan Brown
  Author URI:   https://thesplitpixel.com
  Template:     twentytwenty
- Version:      1.0.0
+ Version:      1.0.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -239,4 +239,8 @@ a[rel="tag"] {
 
 .nf-form-fields-required {
   display: none !important;
+}
+
+.entry-content > .row {
+  max-width: 90rem !important;
 }

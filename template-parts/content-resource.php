@@ -11,7 +11,7 @@
 	<div class="post-inner padding-remove__top <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
 
 		<div class="entry-content">
-			<div class="row alignwide">
+			<div class="alignwide">
 				<div class="columns">
 					<div class="sm-10 md-3 resource-list">
 						<?php echo do_shortcode('[searchandfilter slug="resource-filter"]'); ?>

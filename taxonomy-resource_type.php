@@ -81,9 +81,7 @@ get_header();
 
 		while ( have_posts() ) {
 			$i++;
-			if ( $i > 1 ) {
-				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
-			}
+			if ( $i > 1 ) {}
 			the_post();
 
 			get_template_part( 'template-parts/taxonomy-content', get_post_type() );
